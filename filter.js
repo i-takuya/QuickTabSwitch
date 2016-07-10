@@ -1,9 +1,9 @@
-var tabs = '#tab_list',
+var search = '#search',
 tag = '#div tab_element';
 
 $(function() {
-    $(document).on('keyup', tabs, function(e) {
-        var val =  $.trim($(tabs).val()).replace(/ +/g, ' ').toLowerCase();
+    $(document).on('keyup', search, function(e) {
+        var val =  $.trim($(search).val()).replace(/ +/g, ' ').toLowerCase();
 
         $(tag).show().filter(function() {
         var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
