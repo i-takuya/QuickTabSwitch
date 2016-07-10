@@ -59,11 +59,11 @@ window.onload = function() {
       tabElements[i].style.width = tabElementsWidth;
       tabBlockElements[i].style.width = tabBlockWidth;
     }
-
+// refer to  following page http://stackoverflow.com/questions/2903991/how-to-detect-ctrlv-ctrlc-using-javascript
     $(document).keydown(function(e) {
-        if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = true;
+        if (e.keyCode == ctrlKey) ctrlDown = true;
     }).keyup(function(e) {
-        if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = false;
+        if (e.keyCode == ctrlKey) ctrlDown = false;
     });
 
     window.addEventListener('keydown', function(e){
