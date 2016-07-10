@@ -1,5 +1,5 @@
 var search = '#search',
-tag = '#div tab_element';
+tag = 'tab_element';
 
 $(function() {
     $(document).on('keyup', search, function(e) {

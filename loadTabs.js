@@ -11,6 +11,8 @@ window.onload = function() {
     var tabBlockElements = '';
     var targetTabId = '';
     var targetWindowId = '';
+    var ctrlKey = 17;
+    var ctrlDown = false;
 
     if(tabsCount > 50){
       titleLimit = 8;
@@ -58,7 +60,15 @@ window.onload = function() {
       tabBlockElements[i].style.width = tabBlockWidth;
     }
 
+    $(document).keydown(function(e) {
+        if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = true;
+    }).keyup(function(e) {
+        if (e.keyCode == ctrlKey || e.keyCode == cmdKey) ctrlDown = false;
+    });
+
     window.addEventListener('keydown', function(e){
+      if(!ctrlDown)
+          return 0;
       if(e.shiftKey){
         targetTabId = keyAssigns[String.fromCharCode(e.keyCode)];
       }else{
