@@ -7,8 +7,10 @@
 <script src="loadTabs.js"></script>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body>
-<input type="text" id="search" placeholder="Type to search">
+<body onLoad="document.search.search.focus()">
+<form name="search">
+<input type="text" name="search" id="search" placeholder="Type to search">
+</form>
 <div id="tab_list"></div>
 </body>
 </html>
